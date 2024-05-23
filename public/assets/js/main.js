@@ -103,7 +103,7 @@ document.querySelectorAll('.btn-eliminar').forEach(btn =>{
     console.log(id);
 
         try{
-            const response = await axios.delete(`/cancion/${id}`)
+          const response = await axios.delete(`http://localhost:3000/cancion?id=${id}`);
             if(response.status === 200){
                 const message = response.data.message;
                 console.log(message);

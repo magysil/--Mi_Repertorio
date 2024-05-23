@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.post('/',postCancion )
 router.put('/:id', putCancion)
-router.delete('/:id', deleteCancion)
+router.delete('/', deleteCancion)
 
 export default router;

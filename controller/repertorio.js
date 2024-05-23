@@ -43,7 +43,7 @@ export const putCancion = async(req,res) => {
 }
 
 export const deleteCancion = async(req,res) => {
-  const id = req.params.id
+  const id = req.query.id
   try {
     const response = await eliminarCancion(id)
     console.log(response)
