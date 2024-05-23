@@ -11,9 +11,10 @@ const __dirname = dirname( __filename )
 
 import vistaHomeRoutes from '../routes/vistaHome.routes.js'
 import apiRootPostCancionRoute from '../routes/apiRootCancion.routes.js'
-import apiRootGetCancionRoute from '../routes/apiRootGetCancion.routes.js'
+import apiRootGetCancionRoute from '../routes/apiRootCancion.routes.js'
 import apiRootPutCancionRoute from '../routes/apiRootCancion.routes.js'
 import apiRootDeleteCancionRoute from '../routes/apiRootCancion.routes.js'
+import apiMostrarCancionesRoute from '../routes/apiRootGetCancion.routes.js'
 
 class Server{
 
@@ -27,9 +28,10 @@ class Server{
 
         this.backEndApi = {
             rootAgregarcancion: '/cancion',
-            rootMostrarcanciones:'/canciones',
+            rootMostrarcanciones:'/cancion',
             rootEditarCancion: '/cancion',
             rootEliminarCancion:'/cancion',
+            mostrarcanciones:'/canciones',
 
         }
 
@@ -56,6 +58,7 @@ class Server{
         this.app.use(this.backEndApi.rootMostrarcanciones, apiRootGetCancionRoute)
         this.app.use(this.backEndApi.rootEditarCancion, apiRootPutCancionRoute)
         this.app.use(this.backEndApi.rootEliminarCancion, apiRootDeleteCancionRoute)
+        this.app.use(this.backEndApi.mostrarcanciones, apiMostrarCancionesRoute)
     
     }
 

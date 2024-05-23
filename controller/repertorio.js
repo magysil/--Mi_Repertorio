@@ -53,3 +53,12 @@ export const deleteCancion = async(req,res) => {
     res.status(500).json({ message: 'Error al eliminar la canción' });
   }
 }
+
+export const mostrarCancion = async(req,res) => {
+  try {
+    const canciones = await obtenerCanciones();
+    res.status(200).json(canciones)
+  } catch (error) {
+    
+  }
+}

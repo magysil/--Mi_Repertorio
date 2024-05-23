@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cancionInput.value = "";
         artistaInput.value = "";
         tonoInput.value = "";
-        window.location.href = "/canciones";
+        window.location.href = "/cancion";
       }else {
         console.error("Error al agregar la canción");
       }

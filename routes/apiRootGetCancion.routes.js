@@ -1,8 +1,8 @@
 import express from 'express';
-import { getCancion} from '../controller/repertorio.js';
+import { mostrarCancion} from '../controller/repertorio.js';
 const router = express.Router();
 
 
-router.get('/',getCancion )
+router.get('/',mostrarCancion )
 
 export default router;
